@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { GOLD, BLACK, DARK_BORDER, OFF_WHITE, GREY, CHARCOAL, DARK_CARD, GOLD_MUTED, CREAM } from '../theme';
 import { siteImages } from '../images';
@@ -41,9 +42,17 @@ const recentProjects = [
   { type: 'Merit Restaurant', year: '2025', category: 'Restaurant', image: siteImages.restaurant },
 ];
 
+const heroSlides = [
+  { image: siteImages.heroVilla, label: 'Luxury Property Development' },
+  ...recentProjects.map(project => ({ image: project.image, label: project.type })),
+];
+
 export default function Home() {
   const { isMobile, isTablet } = useResponsive();
+  const [activeSlide, setActiveSlide] = useState(0);
   const sectionPad = isMobile ? '48px 16px' : '80px 32px';
+  const showPreviousSlide = () => setActiveSlide(index => (index - 1 + heroSlides.length) % heroSlides.length);
+  const showNextSlide = () => setActiveSlide(index => (index + 1) % heroSlides.length);
 
   return (
     <div style={{ background: CREAM }}>
@@ -51,19 +60,29 @@ export default function Home() {
       {/* Hero */}
       <section style={{
         minHeight: isMobile ? 500 : 620,
-        background: isMobile
-          ? `linear-gradient(180deg, ${CREAM} 0%, rgba(250,249,245,0.9) 100%), url(${siteImages.heroVilla}) center / cover no-repeat`
-          : `linear-gradient(90deg, ${CREAM} 0%, ${CREAM} 42%, rgba(250,249,245,0.3) 100%), url(${siteImages.heroVilla}) center right / cover no-repeat`,
+        background: CHARCOAL,
         display: 'flex', alignItems: 'center',
         borderBottom: `1px solid ${DARK_BORDER}`,
         position: 'relative', overflow: 'hidden',
       }}>
+        <img
+          key={heroSlides[activeSlide].image}
+          src={heroSlides[activeSlide].image}
+          alt={heroSlides[activeSlide].label}
+          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', animation: 'hero-photo-fade 0.6s ease both' }}
+        />
+        <div style={{
+          position: 'absolute', inset: 0,
+          background: isMobile
+            ? 'linear-gradient(180deg, rgba(250,249,245,0.5), rgba(250,249,245,0.68))'
+            : 'linear-gradient(90deg, rgba(250,249,245,0.62) 0%, rgba(250,249,245,0.38) 48%, rgba(250,249,245,0.04) 100%)',
+        }} />
         {!isMobile && <>
           <div style={{ position: 'absolute', right: 80, top: 0, bottom: 0, width: 1, background: DARK_BORDER }} />
           <div style={{ position: 'absolute', top: 40, left: 0, right: 0, height: 1, background: DARK_BORDER }} />
           <div style={{ position: 'absolute', bottom: 40, left: 0, right: 0, height: 1, background: DARK_BORDER }} />
         </>}
-        <div style={{ maxWidth: 1280, margin: '0 auto', padding: isMobile ? '60px 16px' : '80px 32px', width: '100%' }}>
+        <div style={{ maxWidth: 1280, margin: '0 auto', padding: isMobile ? '60px 16px 100px' : '80px 88px', width: '100%', position: 'relative', zIndex: 1 }}>
           <div style={{ color: GOLD, fontSize: 10, letterSpacing: 4, textTransform: 'uppercase', marginBottom: 20, fontWeight: 600 }}>
             Luxury Property Development
           </div>
@@ -84,6 +103,39 @@ export default function Home() {
               Our Services
             </Link>
           </div>
+        </div>
+        <button
+          type="button"
+          aria-label="Previous featured photo"
+          onClick={showPreviousSlide}
+          style={{ position: 'absolute', zIndex: 2, top: '50%', left: 28, transform: 'translateY(-50%)', width: 44, height: 44, border: `1px solid ${GOLD}`, background: 'rgba(250,249,245,0.82)', color: BLACK, fontSize: 28, cursor: 'pointer', display: isMobile ? 'none' : 'block' }}
+        >
+          ‹
+        </button>
+        <button
+          type="button"
+          aria-label="Next featured photo"
+          onClick={showNextSlide}
+          style={{ position: 'absolute', zIndex: 2, top: '50%', right: 28, transform: 'translateY(-50%)', width: 44, height: 44, border: `1px solid ${GOLD}`, background: 'rgba(250,249,245,0.82)', color: BLACK, fontSize: 28, cursor: 'pointer', display: isMobile ? 'none' : 'block' }}
+        >
+          ›
+        </button>
+        <div style={{ position: 'absolute', zIndex: 2, bottom: isMobile ? 20 : 30, left: '50%', transform: 'translateX(-50%)', display: 'flex', alignItems: 'center', gap: isMobile ? 12 : 18 }}>
+          {heroSlides.map((slide, index) => (
+            <button
+              key={slide.image}
+              type="button"
+              aria-label={`Show photo ${index + 1}: ${slide.label}`}
+              aria-current={index === activeSlide ? 'true' : undefined}
+              onClick={() => setActiveSlide(index)}
+              style={{ border: 0, borderBottom: `2px solid ${index === activeSlide ? GOLD : `${OFF_WHITE}66`}`, background: 'none', color: index === activeSlide ? OFF_WHITE : `${OFF_WHITE}99`, padding: '6px 0', fontSize: isMobile ? 10 : 12, letterSpacing: 1, cursor: 'pointer', minWidth: isMobile ? 22 : 28 }}
+            >
+              {String(index + 1).padStart(2, '0')}
+            </button>
+          ))}
+        </div>
+        <div aria-live="polite" style={{ position: 'absolute', zIndex: 2, right: isMobile ? 16 : 36, bottom: isMobile ? 56 : 34, color: OFF_WHITE, fontSize: 10, letterSpacing: 2 }}>
+          {heroSlides[activeSlide].label}
         </div>
       </section>
 

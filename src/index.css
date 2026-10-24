@@ -37,13 +37,18 @@ img {
   height: 56px !important;
   margin-left: -28px !important;
   margin-top: -28px !important;
-  border-color: #AAA985 !important;
+  border-color: #B79A42 !important;
 }
 
 /* Marquee animation */
 @keyframes marquee {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-33.333%); }
+}
+
+@keyframes hero-photo-fade {
+  from { opacity: 0.65; }
+  to { opacity: 1; }
 }
 
 /* Prevent horizontal overflow */
@@ -65,8 +70,8 @@ html, body {
   background: #F1F0EA;
 }
 ::-webkit-scrollbar-thumb {
-  background: #8F8D68;
+  background: #8A6B1C;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #AAA985;
+  background: #B79A42;
 }
