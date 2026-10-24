@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { GOLD, DARK_BORDER, OFF_WHITE, GREY, CHARCOAL } from '../theme';
+import { GOLD, DARK_BORDER, OFF_WHITE, GREY, CHARCOAL, DARK_CARD, CREAM } from '../theme';
 import { siteVideos } from '../images';
 import PageHeader from '../components/PageHeader';
 import { useLang } from '../context/LanguageContext';
@@ -100,7 +100,7 @@ function VideoCard({ video, height }: { video: { src: string; label: string; sub
           <div style={{ width: 24, height: 1, background: GOLD }} />
           <div style={{ color: GOLD, fontSize: 9, letterSpacing: 3, textTransform: 'uppercase', fontWeight: 600 }}>{video.label}</div>
         </div>
-        <div style={{ color: OFF_WHITE, fontSize: 12, letterSpacing: 0.5, marginTop: 4, opacity: 0.85 }}>{video.sub}</div>
+        <div style={{ color: '#F5F0E8', fontSize: 12, letterSpacing: 0.5, marginTop: 4, opacity: 0.85 }}>{video.sub}</div>
       </div>
       <div style={{ position: 'absolute', top: 0, left: 0, width: 32, height: 2, background: GOLD, pointerEvents: 'none' }} />
       <div style={{ position: 'absolute', top: 0, left: 0, width: 2, height: 32, background: GOLD, pointerEvents: 'none' }} />
@@ -245,7 +245,7 @@ export default function Projects() {
   const { isMobile } = useResponsive();
 
   return (
-    <div style={{ background: '#0A0A0A' }}>
+    <div style={{ background: CREAM }}>
 
       <PageHeader
         eyebrow={t('Portfolio', 'Portföy')}
@@ -328,7 +328,7 @@ export default function Projects() {
       </div>
 
       {/* ── COMPLETED PROJECTS ── */}
-      <div id="completed" style={{ background: '#080808', marginTop: isMobile ? 40 : 80 }}>
+      <div id="completed" style={{ background: DARK_CARD, marginTop: isMobile ? 40 : 80 }}>
 
         {/* Section header — full width dark band */}
         <div style={{ maxWidth: 1280, margin: '0 auto', padding: isMobile ? '40px 16px 32px' : '72px 32px 48px', display: 'flex', alignItems: 'center', gap: 20 }}>

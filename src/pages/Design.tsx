@@ -1,4 +1,4 @@
-import { GOLD, DARK_BORDER, OFF_WHITE, GREY, CHARCOAL, DARK_CARD } from '../theme';
+import { GOLD, DARK_BORDER, OFF_WHITE, GREY, CHARCOAL, DARK_CARD, CREAM } from '../theme';
 import { siteImages } from '../images';
 import PageHeader from '../components/PageHeader';
 import { useLang } from '../context/LanguageContext';
@@ -41,7 +41,7 @@ export default function Design() {
   const sectionPad = isMobile ? '48px 16px' : '80px 32px';
 
   return (
-    <div style={{ background: '#0A0A0A' }}>
+    <div style={{ background: CREAM }}>
 
       <PageHeader eyebrow={t('Craftsmanship & Vision','Ustalık & Vizyon')} titleLight={t('Design &','Tasarım &')} titleBold={t('Development','Geliştirme')} watermark="DESIGN" />
 
@@ -93,7 +93,7 @@ export default function Design() {
               <div key={i} style={{ background: DARK_CARD }}>
                 <div style={{ height: isMobile ? 160 : 190, position: 'relative', overflow: 'hidden' }}>
                   <img src={seg.image} alt={seg.title} style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'brightness(0.7) saturate(0.9)' }} />
-                  <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, transparent 30%, rgba(26,26,26,0.9) 100%)' }} />
+                  <div style={{ position: 'absolute', inset: 0, background: `linear-gradient(180deg, transparent 30%, ${DARK_CARD}E6 100%)` }} />
                 </div>
                 <div style={{ padding: isMobile ? '20px 18px 24px' : '28px 32px 36px' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 12 }}>

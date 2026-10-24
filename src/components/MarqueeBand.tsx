@@ -1,3 +1,5 @@
+import { BLACK, GOLD, GOLD_MUTED } from '../theme';
+
 const items = [
   'Luxury Renovation',
   'Bespoke Design',
@@ -17,12 +19,12 @@ export default function MarqueeBand() {
   return (
     <div
       style={{
-        background: '#C9A84C',
+        background: GOLD,
         overflow: 'hidden',
         whiteSpace: 'nowrap',
         padding: '10px 0',
-        borderTop: '1px solid #b8943a',
-        borderBottom: '1px solid #b8943a',
+        borderTop: `1px solid ${GOLD_MUTED}`,
+        borderBottom: `1px solid ${GOLD_MUTED}`,
       }}
     >
       <div
@@ -39,7 +41,7 @@ export default function MarqueeBand() {
               display: 'inline-flex',
               alignItems: 'center',
               gap: 24,
-              color: '#0A0A0A',
+              color: BLACK,
               fontSize: 10,
               fontWeight: 700,
               letterSpacing: 3,
@@ -48,7 +50,7 @@ export default function MarqueeBand() {
             }}
           >
             {item}
-            <span style={{ color: '#00000066', fontSize: 8 }}>{SEPARATOR}</span>
+            <span style={{ color: `${BLACK}66`, fontSize: 8 }}>{SEPARATOR}</span>
           </span>
         ))}
       </div>

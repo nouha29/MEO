@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { GOLD, BLACK, DARK_BORDER, OFF_WHITE, GREY, CHARCOAL, DARK_CARD, GOLD_MUTED } from '../theme';
+import { GOLD, BLACK, DARK_BORDER, OFF_WHITE, GREY, CHARCOAL, DARK_CARD, GOLD_MUTED, CREAM } from '../theme';
 import { siteImages } from '../images';
 import { useResponsive } from '../hooks/useResponsive';
 
@@ -46,14 +46,14 @@ export default function Home() {
   const sectionPad = isMobile ? '48px 16px' : '80px 32px';
 
   return (
-    <div style={{ background: BLACK }}>
+    <div style={{ background: CREAM }}>
 
       {/* Hero */}
       <section style={{
         minHeight: isMobile ? 500 : 620,
         background: isMobile
-          ? `linear-gradient(180deg, ${CHARCOAL} 0%, rgba(20,20,20,0.9) 100%), url(${siteImages.heroVilla}) center / cover no-repeat`
-          : `linear-gradient(90deg, ${CHARCOAL} 0%, ${CHARCOAL} 42%, rgba(20,20,20,0.72) 100%), url(${siteImages.heroVilla}) center right / cover no-repeat`,
+          ? `linear-gradient(180deg, ${CREAM} 0%, rgba(250,249,245,0.9) 100%), url(${siteImages.heroVilla}) center / cover no-repeat`
+          : `linear-gradient(90deg, ${CREAM} 0%, ${CREAM} 42%, rgba(250,249,245,0.3) 100%), url(${siteImages.heroVilla}) center right / cover no-repeat`,
         display: 'flex', alignItems: 'center',
         borderBottom: `1px solid ${DARK_BORDER}`,
         position: 'relative', overflow: 'hidden',
@@ -112,7 +112,7 @@ export default function Home() {
         <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : isTablet ? 'repeat(2, 1fr)' : 'repeat(3, 1fr)', gap: 1, background: DARK_BORDER }}>
           {services.map(svc => (
             <Link key={svc.number} to={svc.path} style={{ background: DARK_CARD, padding: 0, textDecoration: 'none', display: 'block', transition: 'background 0.2s' }}
-              onMouseEnter={e => (e.currentTarget.style.background = '#202020')}
+              onMouseEnter={e => (e.currentTarget.style.background = '#E7E5DA')}
               onMouseLeave={e => (e.currentTarget.style.background = DARK_CARD)}
             >
               <div style={{ height: 160, position: 'relative', overflow: 'hidden' }}>
@@ -161,7 +161,7 @@ export default function Home() {
             <div key={i} style={{ background: DARK_CARD, border: `1px solid ${DARK_BORDER}`, overflow: 'hidden' }}>
               <div style={{ height: isMobile ? 160 : 220, background: CHARCOAL, position: 'relative' }}>
                 <img src={p.image} alt={p.type} style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'brightness(0.72) saturate(0.9)' }} />
-                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, transparent 45%, rgba(10,10,10,0.72) 100%)' }} />
+                <div style={{ position: 'absolute', inset: 0, background: `linear-gradient(180deg, transparent 45%, ${DARK_CARD}B8 100%)` }} />
                 <div style={{ position: 'absolute', top: 10, right: 10, background: GOLD, color: BLACK, fontSize: 9, fontWeight: 700, padding: '3px 7px', letterSpacing: 1.5 }}>{p.year}</div>
               </div>
               <div style={{ padding: '12px 14px' }}>

@@ -1,4 +1,4 @@
-import { GOLD, DARK_BORDER, OFF_WHITE, GREY } from '../theme';
+import { GOLD, DARK_BORDER, OFF_WHITE, GREY, CREAM } from '../theme';
 import PageHeader from '../components/PageHeader';
 import ProjectCarousel from '../components/ProjectCarousel';
 import { useLang } from '../context/LanguageContext';
@@ -38,7 +38,7 @@ export default function ProjectsOngoing() {
   const { isMobile } = useResponsive();
 
   return (
-    <div style={{ background: '#0A0A0A' }}>
+    <div style={{ background: CREAM }}>
       <PageHeader
         eyebrow={t('Portfolio', 'Portföy')}
         titleLight={t('In Progress', 'Devam Eden')}

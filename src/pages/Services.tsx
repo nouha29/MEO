@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { GOLD, BLACK, DARK_BORDER, OFF_WHITE, GREY, CHARCOAL, DARK_CARD } from '../theme';
+import { GOLD, BLACK, DARK_BORDER, OFF_WHITE, GREY, CHARCOAL, DARK_CARD, CREAM } from '../theme';
 import { siteImages } from '../images';
 import PageHeader from '../components/PageHeader';
 import { useLang } from '../context/LanguageContext';
@@ -57,7 +57,7 @@ const ImagePanel = ({ svc, align }: { svc: typeof services[0]; align: 'left' | '
   const { isMobile } = useResponsive();
   return (
     <div style={{
-      background: `linear-gradient(180deg, rgba(20,20,20,0.35), ${CHARCOAL} 78%), url(${svc.image}) center / cover no-repeat`,
+      background: `linear-gradient(180deg, rgba(250,249,245,0.35), ${CHARCOAL} 78%), url(${svc.image}) center / cover no-repeat`,
       padding: isMobile ? 24 : 40,
       borderLeft: align === 'right' && !isMobile ? `1px solid ${DARK_BORDER}` : undefined,
       borderRight: align === 'left' && !isMobile ? `1px solid ${DARK_BORDER}` : undefined,
@@ -81,7 +81,7 @@ export default function Services() {
   const { isMobile } = useResponsive();
   const sectionPad = isMobile ? '48px 16px' : '80px 32px';
   return (
-    <div style={{ background: '#0A0A0A' }}>
+    <div style={{ background: CREAM }}>
 
       <PageHeader eyebrow={t('What We Offer','Hizmetlerimiz')} titleLight={t('Our','Sunduğumuz')} titleBold={t('Services','Hizmetler')} watermark="SERVICES" />
 

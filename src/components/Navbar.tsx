@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { GOLD, BLACK, DARK_BORDER, OFF_WHITE, GREY, CHARCOAL } from '../theme';
+import { GOLD, BLACK, DARK_BORDER, OFF_WHITE, GREY, CHARCOAL, DARK_CARD } from '../theme';
 import { useLang } from '../context/LanguageContext';
 import { useResponsive } from '../hooks/useResponsive';
 
@@ -48,7 +48,7 @@ export default function Navbar() {
   const isProjectsActive = location.pathname === '/projects';
 
   return (
-    <nav style={{ background: BLACK, borderBottom: `1px solid ${DARK_BORDER}`, position: 'sticky', top: 0, zIndex: 1000 }}>
+    <nav style={{ background: CHARCOAL, borderBottom: `1px solid ${DARK_BORDER}`, position: 'sticky', top: 0, zIndex: 1000 }}>
       <div style={{
         maxWidth: 1280, margin: '0 auto', padding: isMobile ? '0 16px' : '0 32px',
         display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 64,
@@ -106,7 +106,7 @@ export default function Navbar() {
               {projectsOpen && (
                 <div style={{
                   position: 'absolute', top: '100%', left: 0,
-                  background: '#111', border: `1px solid ${DARK_BORDER}`,
+                  background: DARK_CARD, border: `1px solid ${DARK_BORDER}`,
                   minWidth: 180, zIndex: 2000,
                   boxShadow: '0 8px 32px rgba(0,0,0,0.6)',
                 }}>
@@ -207,7 +207,7 @@ export default function Navbar() {
               <span style={{ fontSize: 10, color: mobileProjectsOpen ? GOLD : GREY }}>{mobileProjectsOpen ? '▲' : '▼'}</span>
             </button>
             {mobileProjectsOpen && (
-              <div style={{ background: '#111', borderBottom: `1px solid ${DARK_BORDER}` }}>
+              <div style={{ background: DARK_CARD, borderBottom: `1px solid ${DARK_BORDER}` }}>
                 {projectsDropdown.map(item => (
                   <Link
                     key={item.path}

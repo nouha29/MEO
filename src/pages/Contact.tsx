@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { GOLD, BLACK, DARK_BORDER, OFF_WHITE, GREY, CHARCOAL, DARK_CARD } from '../theme';
+import { GOLD, BLACK, DARK_BORDER, OFF_WHITE, GREY, CHARCOAL, DARK_CARD, CREAM } from '../theme';
 import PageHeader from '../components/PageHeader';
 import { useLang } from '../context/LanguageContext';
 import { useResponsive } from '../hooks/useResponsive';
@@ -42,7 +42,7 @@ export default function Contact() {
   };
 
   return (
-    <div style={{ background: '#0A0A0A' }}>
+    <div style={{ background: CREAM }}>
 
       <PageHeader
         eyebrow={t('Get in Touch', 'Bize Ulaşın')}

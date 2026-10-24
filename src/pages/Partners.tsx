@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { GOLD, BLACK, DARK_BORDER, OFF_WHITE, GREY, CHARCOAL, DARK_CARD } from '../theme';
+import { GOLD, BLACK, DARK_BORDER, OFF_WHITE, GREY, CHARCOAL, DARK_CARD, CREAM } from '../theme';
 import PageHeader from '../components/PageHeader';
 import { useLang } from '../context/LanguageContext';
 import { useResponsive } from '../hooks/useResponsive';
@@ -25,7 +25,7 @@ function LogoMassMob({ size = 1 }: { size?: number }) {
 
 
 function LogoMobizu({ size = 1 }: { size?: number }) {
-  const c = '#B8A060';
+  const c = GOLD;
   return (
     <div style={{ display: 'inline-flex', flexDirection: 'column', alignItems: 'flex-start' }}>
       {/* Stylised "M" mark */}
@@ -73,7 +73,7 @@ const featuredPartners = [
     url: 'https://www.mobizu.com.tr/',
     category: 'Custom Furniture & Project Management',
     since: '2024',
-    accent: '#B8A060',
+    accent: GOLD,
     projects: ['Luxury Residences', 'Hotel Fit-Outs', 'Commercial Spaces'],
   },
 ];
@@ -101,7 +101,7 @@ export default function Partners() {
   const { isMobile } = useResponsive();
 
   return (
-    <div style={{ background: '#0A0A0A' }}>
+    <div style={{ background: CREAM }}>
 
       <PageHeader
         eyebrow={t('Our Network', 'Ağımız')}

@@ -10,8 +10,8 @@ html {
 }
 
 body {
-  background-color: #0A0A0A;
-  color: #F5F0E8;
+  background-color: #FAF9F5;
+  color: #33332D;
   font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -37,7 +37,7 @@ img {
   height: 56px !important;
   margin-left: -28px !important;
   margin-top: -28px !important;
-  border-color: #E8C97A !important;
+  border-color: #AAA985 !important;
 }
 
 /* Marquee animation */
@@ -62,11 +62,11 @@ html, body {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #141414;
+  background: #F1F0EA;
 }
 ::-webkit-scrollbar-thumb {
-  background: #C9A84C;
+  background: #8F8D68;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #E8C97A;
+  background: #AAA985;
 }

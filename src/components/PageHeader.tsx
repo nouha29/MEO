@@ -1,4 +1,4 @@
-import { GOLD, DARK_BORDER, OFF_WHITE, GREY } from '../theme';
+import { GOLD, DARK_BORDER, OFF_WHITE, GREY, CHARCOAL } from '../theme';
 import { useResponsive } from '../hooks/useResponsive';
 
 interface PageHeaderProps {
@@ -16,7 +16,7 @@ export default function PageHeader({ eyebrow, titleLight, titleBold, boldFirst =
 
   return (
     <section style={{
-      background: '#0A0A0A',
+      background: CHARCOAL,
       borderBottom: `1px solid ${DARK_BORDER}`,
       padding: isMobile ? '32px 16px 28px' : '44px 32px 36px',
       position: 'relative',

@@ -1,4 +1,4 @@
-import { GOLD, DARK_BORDER, OFF_WHITE, GREY } from '../theme';
+import { GOLD, DARK_BORDER, OFF_WHITE, GREY, CREAM } from '../theme';
 import PageHeader from '../components/PageHeader';
 import ProjectCarousel from '../components/ProjectCarousel';
 import { useLang } from '../context/LanguageContext';
@@ -100,7 +100,7 @@ export default function ProjectsCompleted() {
   const { isMobile } = useResponsive();
 
   return (
-    <div style={{ background: '#080808' }}>
+    <div style={{ background: CREAM }}>
       <PageHeader
         eyebrow={t('Portfolio', 'Portföy')}
         titleLight={t('Completed', 'Tamamlanan')}

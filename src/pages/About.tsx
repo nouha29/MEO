@@ -1,4 +1,4 @@
-import { GOLD, DARK_BORDER, OFF_WHITE, GREY, DARK_CARD } from '../theme';
+import { GOLD, DARK_BORDER, OFF_WHITE, GREY, DARK_CARD, CREAM } from '../theme';
 import { siteImages } from '../images';
 import PageHeader from '../components/PageHeader';
 import { useLang } from '../context/LanguageContext';
@@ -16,7 +16,7 @@ export default function About() {
   const { isMobile } = useResponsive();
   const sectionPad = isMobile ? '48px 16px' : '80px 32px';
   return (
-    <div style={{ background: '#0A0A0A' }}>
+    <div style={{ background: CREAM }}>
 
       <PageHeader eyebrow={t('Our Story','Hikayemiz')} titleLight={t('About','Hakkında')} titleBold="MEO Development" watermark="ABOUT" />
 
@@ -52,7 +52,7 @@ export default function About() {
                 alt="Luxury interior designed by MEO Development"
                 style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'brightness(0.72) saturate(0.9)' }}
               />
-              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, transparent 20%, rgba(26,26,26,0.88) 100%)' }} />
+              <div style={{ position: 'absolute', inset: 0, background: `linear-gradient(180deg, transparent 20%, ${DARK_CARD}E0 100%)` }} />
             </div>
             <div style={{ padding: 40 }}>
             <div style={{ color: GOLD, fontSize: 11, letterSpacing: 3, textTransform: 'uppercase', marginBottom: 28, fontWeight: 600 }}>
