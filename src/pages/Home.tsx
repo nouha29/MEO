@@ -36,7 +36,7 @@ const services = [
 ];
 
 const recentProjects = [
-  { type: 'Merit Kensington', year: '2025', category: 'Mansion', image: siteImages.mansion },
+  { type: 'Merit Kensington', year: '2025', category: 'Mansion', image: siteImages.meritKensington },
   { type: 'Sinpaş Palas', year: '2025', category: 'Penthouse', image: siteImages.penthouse },
   { type: 'Merit Hotel', year: '2025', category: 'Hotel', image: siteImages.hotel },
   { type: 'Merit Restaurant', year: '2025', category: 'Restaurant', image: siteImages.restaurant },

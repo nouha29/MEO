@@ -7,7 +7,7 @@ export const siteImages = {
   hotel: '/images/hotel.jpg',
   restaurant: '/images/restaurant.jpg',
   penthouse: '/images/penthouse.jpg',
-  mansion: '/images/mansion.jpg',
+  meritKensington: '/images/cp-merit-1.jpg',
   villa: '/images/villa-sinpas.jpg',
   modernHouse: '/images/modern-house.jpg',
   residence: '/images/residence.jpg',

@@ -39,11 +39,12 @@ export default function Footer() {
         }}>
           {/* Brand */}
           <div style={{ gridColumn: isMobile ? '1 / -1' : 'auto' }}>
-            <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none', marginBottom: 16 }}>
-              <div style={{ width: 34, height: 34, border: `2px solid ${GOLD}`, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <span style={{ color: GOLD, fontWeight: 700, fontSize: 11, letterSpacing: 1 }}>MEO</span>
-              </div>
-              <span style={{ color: OFF_WHITE, fontWeight: 600, fontSize: 12, letterSpacing: 2, textTransform: 'uppercase' }}>Development LLC</span>
+            <Link to="/" aria-label="MEO Development LLC home" style={{ display: 'inline-flex', textDecoration: 'none', marginBottom: 16 }}>
+              <img
+                src="/images/meo-development-logo.png"
+                alt="MEO Development LLC"
+                style={{ width: 190, height: 'auto', display: 'block' }}
+              />
             </Link>
             <p style={{ color: GREY, fontSize: 13, lineHeight: 1.8, maxWidth: 280 }}>
               A leading provider of bespoke property development and home improvement solutions.

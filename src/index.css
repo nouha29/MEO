@@ -37,7 +37,7 @@ img {
   height: 56px !important;
   margin-left: -28px !important;
   margin-top: -28px !important;
-  border-color: #B79A42 !important;
+  border-color: #D6B56D !important;
 }
 
 /* Marquee animation */
@@ -70,8 +70,8 @@ html, body {
   background: #F1F0EA;
 }
 ::-webkit-scrollbar-thumb {
-  background: #8A6B1C;
+  background: #D6B56D;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #B79A42;
+  background: #D6B56D;
 }

@@ -55,16 +55,12 @@ export default function Navbar() {
       }}>
 
         {/* Logo */}
-        <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none' }}>
-          <div style={{ width: 36, height: 36, border: `2px solid ${GOLD}`, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-            <span style={{ color: GOLD, fontWeight: 700, fontSize: 12, letterSpacing: 1 }}>MEO</span>
-          </div>
-          {!isMobile && (
-            <div>
-              <div style={{ color: OFF_WHITE, fontWeight: 700, fontSize: 12, letterSpacing: 2.5, textTransform: 'uppercase' }}>Development</div>
-              <div style={{ color: GOLD, fontSize: 9, letterSpacing: 3.5, textTransform: 'uppercase' }}>LLC</div>
-            </div>
-          )}
+        <Link to="/" aria-label="MEO Development LLC home" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', flexShrink: 0 }}>
+          <img
+            src="/images/meo-development-logo.png"
+            alt="MEO Development LLC"
+            style={{ width: isMobile ? 92 : 124, height: 'auto', display: 'block' }}
+          />
         </Link>
 
         {/* Desktop Nav */}
