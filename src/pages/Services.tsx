@@ -6,23 +6,23 @@ import { useLang } from '../context/LanguageContext';
 import { useResponsive } from '../hooks/useResponsive';
 
 const services = [
+  // {
+  //   number: '01',
+  //   title: 'Property Investment Consultancy',
+  //   description:
+  //     'Our investment consultancy service provides end-to-end guidance for investors seeking opportunities in real estate. From market analysis and due diligence to acquisition strategy and portfolio management, we deliver actionable intelligence backed by deep market expertise.',
+  //   features: [
+  //     'Market Analysis & Research',
+  //     'Due Diligence Management',
+  //     'Portfolio Optimization',
+  //     'Risk Assessment',
+  //     'International Real Estate',
+  //     'Land Acquisition Advisory',
+  //   ],
+  //   image: siteImages.investment,
+  // },
   {
     number: '01',
-    title: 'Property Investment Consultancy',
-    description:
-      'Our investment consultancy service provides end-to-end guidance for investors seeking opportunities in real estate. From market analysis and due diligence to acquisition strategy and portfolio management, we deliver actionable intelligence backed by deep market expertise.',
-    features: [
-      'Market Analysis & Research',
-      'Due Diligence Management',
-      'Portfolio Optimization',
-      'Risk Assessment',
-      'International Real Estate',
-      'Land Acquisition Advisory',
-    ],
-    image: siteImages.investment,
-  },
-  {
-    number: '02',
     title: 'Home Improvement & Renovation',
     description:
       'MEO Development LLC specializes in delivering high-quality home improvement and renovation services, transforming properties into aesthetically refined and highly functional living spaces. Our team of expert craftsmen and designers bring unmatched precision to every project.',
@@ -37,7 +37,7 @@ const services = [
     image: siteImages.renovation,
   },
   {
-    number: '03',
+    number: '02',
     title: 'Design & Development Services',
     description:
       'At MEO Development LLC, we understand that every home and property requires a unique approach to design and development. We provide a wide range of high-end luxury furniture and bespoke design solutions for commercial projects, hotels, restaurants, and residences.',
