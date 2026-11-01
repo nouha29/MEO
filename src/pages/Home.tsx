@@ -12,13 +12,13 @@ const stats = [
 ];
 
 const services = [
-  {
-    number: '01',
-    title: 'Property Investment Consultancy',
-    description: 'Expert guidance through the complexities of real estate and land markets, from acquisition to portfolio optimization.',
-    path: '/services',
-    image: siteImages.investment,
-  },
+  // {
+  //   number: '01',
+  //   title: 'Property Investment Consultancy',
+  //   description: 'Expert guidance through the complexities of real estate and land markets, from acquisition to portfolio optimization.',
+  //   path: '/services',
+  //   image: siteImages.investment,
+  // },
   {
     number: '02',
     title: 'Home Improvement & Renovation',

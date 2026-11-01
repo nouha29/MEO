@@ -105,7 +105,7 @@ export default function Contact() {
               </div>
               {(lang === 'tr'
                 ? ['Gayrimenkul Yatırım Danışmanlığı', 'Ev İyileştirme & Renovasyon', 'Tasarım & Geliştirme']
-                : ['Property Investment Consultancy', 'Home Improvement & Renovation', 'Design & Development']
+                : [ 'Home Improvement & Renovation', 'Design & Development']
               ).map((s, i) => (
                 <div key={i} style={{
                   display: 'flex', alignItems: 'center', gap: 10,
