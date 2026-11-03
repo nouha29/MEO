@@ -12,22 +12,15 @@ const stats = [
 ];
 
 const services = [
-  // {
-  //   number: '01',
-  //   title: 'Property Investment Consultancy',
-  //   description: 'Expert guidance through the complexities of real estate and land markets, from acquisition to portfolio optimization.',
-  //   path: '/services',
-  //   image: siteImages.investment,
-  // },
   {
-    number: '02',
+    number: '01',
     title: 'Home Improvement & Renovation',
     description: 'High-quality renovation services transforming properties into aesthetically refined and highly functional living spaces.',
     path: '/services',
     image: siteImages.renovation,
   },
   {
-    number: '03',
+    number: '02',
     title: 'Design & Development',
     description: 'Custom-built luxury furniture and bespoke design solutions for commercial, hospitality, and residential projects.',
     path: '/design',
@@ -48,7 +41,7 @@ const heroSlides = [
 ];
 
 export default function Home() {
-  const { isMobile, isTablet } = useResponsive();
+  const { isMobile } = useResponsive();
   const [activeSlide, setActiveSlide] = useState(0);
   const sectionPad = isMobile ? '48px 16px' : '80px 32px';
   const showPreviousSlide = () => setActiveSlide(index => (index - 1 + heroSlides.length) % heroSlides.length);
@@ -93,7 +86,7 @@ export default function Home() {
             Property Solutions.
           </h1>
           <p style={{ color: GREY, fontSize: isMobile ? 14 : 16, lineHeight: 1.8, maxWidth: 520, marginBottom: 36 }}>
-            We provide a full spectrum of advisory services to guide investors through the complexities of the real estate and land markets.
+            We bring thoughtful renovation, design, and development together to create exceptional spaces for living and business.
           </p>
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
             <Link to="/projects" style={{ background: GOLD, color: BLACK, padding: isMobile ? '14px 28px' : '16px 40px', fontSize: 11, fontWeight: 700, letterSpacing: 2.5, textTransform: 'uppercase', textDecoration: 'none' }}>
@@ -153,15 +146,15 @@ export default function Home() {
 
       {/* Services overview */}
       <section style={{ maxWidth: 1280, margin: '0 auto', padding: sectionPad }}>
-        <div style={{ marginBottom: 36 }}>
+        <div style={{ marginBottom: 36, textAlign: 'center' }}>
           <div style={{ color: GOLD, fontSize: 11, letterSpacing: 4, textTransform: 'uppercase', marginBottom: 12, fontWeight: 600 }}>What We Do</div>
           <h2 style={{ color: OFF_WHITE, fontSize: isMobile ? 28 : 38, fontWeight: 300, letterSpacing: 0.5, marginBottom: 12 }}>Bespoke Services</h2>
-          <div style={{ width: 60, height: 2, background: GOLD, marginBottom: 14 }} />
-          <p style={{ color: GREY, fontSize: 14, lineHeight: 1.7, maxWidth: 580 }}>
+          <div style={{ width: 60, height: 2, background: GOLD, margin: '0 auto 14px' }} />
+          <p style={{ color: GREY, fontSize: 14, lineHeight: 1.7, maxWidth: 580, margin: '0 auto' }}>
             MEO Development LLC offers a comprehensive suite of luxury property and design services tailored to the most discerning clients.
           </p>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : isTablet ? 'repeat(2, 1fr)' : 'repeat(3, 1fr)', gap: 1, background: DARK_BORDER }}>
+        <div style={{ maxWidth: 960, margin: '0 auto', display: 'grid', gridTemplateColumns: isMobile ? '1fr' : 'repeat(2, minmax(0, 1fr))', gap: 1, background: DARK_BORDER }}>
           {services.map(svc => (
             <Link key={svc.number} to={svc.path} style={{ background: DARK_CARD, padding: 0, textDecoration: 'none', display: 'block', transition: 'background 0.2s' }}
               onMouseEnter={e => (e.currentTarget.style.background = '#E7E5DA')}

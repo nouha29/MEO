@@ -1,7 +1,6 @@
 export const siteImages = {
   heroVilla: '/images/hero-villa.jpg',
   luxuryInterior: '/images/luxury-interior.jpg',
-  investment: '/images/investment.jpg',
   renovation: '/images/renovation.jpg',
   bespokeDesign: '/images/bespoke-design.jpg',
   hotel: '/images/hotel.jpg',

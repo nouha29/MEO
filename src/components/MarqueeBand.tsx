@@ -6,7 +6,6 @@ const items = [
   'Property Development',
   'Commercial Projects',
   'Fine Interiors',
-  'Investment Consultancy',
   'Hotel & Hospitality',
   'Mansion & Penthouse',
 ];

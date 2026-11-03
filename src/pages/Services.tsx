@@ -6,21 +6,6 @@ import { useLang } from '../context/LanguageContext';
 import { useResponsive } from '../hooks/useResponsive';
 
 const services = [
-  // {
-  //   number: '01',
-  //   title: 'Property Investment Consultancy',
-  //   description:
-  //     'Our investment consultancy service provides end-to-end guidance for investors seeking opportunities in real estate. From market analysis and due diligence to acquisition strategy and portfolio management, we deliver actionable intelligence backed by deep market expertise.',
-  //   features: [
-  //     'Market Analysis & Research',
-  //     'Due Diligence Management',
-  //     'Portfolio Optimization',
-  //     'Risk Assessment',
-  //     'International Real Estate',
-  //     'Land Acquisition Advisory',
-  //   ],
-  //   image: siteImages.investment,
-  // },
   {
     number: '01',
     title: 'Home Improvement & Renovation',

@@ -4,7 +4,6 @@ import { useResponsive } from '../hooks/useResponsive';
 
 const footerLinks = {
   Services: [
-    { label: 'Investment Consultancy', path: '/services' },
     { label: 'Home Improvement', path: '/services' },
     { label: 'Design & Development', path: '/design' },
   ],

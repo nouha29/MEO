@@ -182,7 +182,7 @@ export default function Contact() {
                   {[
                     { name: 'email',   label: t('Email Address', 'E-posta Adresi'), placeholder: 'ornek@email.com', type: 'email' },
                     { name: 'phone',   label: t('Phone Number', 'Telefon Numarası'), placeholder: lang === 'tr' ? '+90 (5XX) XXX XX XX' : '+1 (000) 000-0000', type: 'tel' },
-                    { name: 'subject', label: t('Subject', 'Konu'), placeholder: t('Property Investment Inquiry', 'Gayrimenkul Yatırım Talebi'), type: 'text' },
+                    { name: 'subject', label: t('Subject', 'Konu'), placeholder: t('Tell us about your project', 'Projenizden bahsedin'), type: 'text' },
                   ].map(f => (
                     <div key={f.name} style={{ marginBottom: 16 }}>
                       <label style={labelStyle}>{f.label}</label>

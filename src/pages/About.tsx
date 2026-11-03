@@ -30,9 +30,8 @@ export default function About() {
               MEO Development LLC is a leading provider of bespoke property development and home improvement solutions.
             </p>
             <p style={{ color: GREY, fontSize: 14, lineHeight: 1.9, marginBottom: 16 }}>
-              Recognized for our commitment to excellence, innovation, and sustainability, we offer a diverse range
-              of services including property investment consultancy, custom-built home fixtures, and comprehensive
-              interior and exterior renovations.
+              Recognized for our commitment to excellence, innovation, and sustainability, we offer custom-built
+              home fixtures and comprehensive interior and exterior renovations.
             </p>
             <p style={{ color: GREY, fontSize: 14, lineHeight: 1.9 }}>
               Catering to both local and international clients, MEO Development LLC delivers tailored solutions
