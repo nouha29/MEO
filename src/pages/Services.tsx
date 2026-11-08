@@ -42,18 +42,20 @@ const ImagePanel = ({ svc, align }: { svc: typeof services[0]; align: 'left' | '
   const { isMobile } = useResponsive();
   return (
     <div style={{
-      background: `linear-gradient(180deg, rgba(250,249,245,0.35), ${CHARCOAL} 78%), url(${svc.image}) center / cover no-repeat`,
+      background: CHARCOAL,
       padding: isMobile ? 24 : 40,
       borderLeft: align === 'right' && !isMobile ? `1px solid ${DARK_BORDER}` : undefined,
       borderRight: align === 'left' && !isMobile ? `1px solid ${DARK_BORDER}` : undefined,
       borderBottom: isMobile ? `1px solid ${DARK_BORDER}` : undefined,
       display: 'flex', flexDirection: 'column', justifyContent: 'space-between',
-      minHeight: isMobile ? 180 : 360,
+      minHeight: isMobile ? 180 : 360, position: 'relative', overflow: 'hidden',
     }}>
-      <div style={{ color: `${GOLD}33`, fontSize: isMobile ? 60 : 88, fontWeight: 700, lineHeight: 1, fontFamily: 'Georgia, serif', textAlign: align === 'right' ? 'right' : 'left' }}>
+      <img src={svc.image} alt={svc.title} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+      <div style={{ position: 'absolute', inset: 0, background: `linear-gradient(180deg, rgba(250,249,245,0.35), ${CHARCOAL} 78%)`, pointerEvents: 'none' }} />
+      <div style={{ position: 'relative', zIndex: 1, color: `${GOLD}33`, fontSize: isMobile ? 60 : 88, fontWeight: 700, lineHeight: 1, fontFamily: 'Georgia, serif', textAlign: align === 'right' ? 'right' : 'left', pointerEvents: 'none' }}>
         {svc.number}
       </div>
-      <div style={{ textAlign: align === 'right' ? 'right' : 'left' }}>
+      <div style={{ position: 'relative', zIndex: 1, textAlign: align === 'right' ? 'right' : 'left', pointerEvents: 'none' }}>
         <div style={{ width: 32, height: 2, background: GOLD, marginBottom: 10, marginLeft: align === 'right' ? 'auto' : undefined }} />
         <div style={{ color: GOLD, fontSize: 10, letterSpacing: 3, textTransform: 'uppercase' }}>Service {svc.number}</div>
       </div>

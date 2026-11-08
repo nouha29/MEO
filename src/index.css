@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  cursor: none !important;
 }
 
 html {
@@ -31,13 +30,13 @@ img {
   display: block;
 }
 
-/* Custom cursor hover state */
-.cursor-ring.cursor-hover {
-  width: 56px !important;
-  height: 56px !important;
-  margin-left: -28px !important;
-  margin-top: -28px !important;
-  border-color: #D6B56D !important;
+main img {
+  cursor: pointer;
+}
+
+main img:focus-visible {
+  outline: 2px solid #D6B56D;
+  outline-offset: 3px;
 }
 
 /* Marquee animation */
@@ -54,12 +53,6 @@ img {
 /* Prevent horizontal overflow */
 html, body {
   overflow-x: hidden;
-}
-
-/* On touch devices restore native cursor */
-@media (hover: none) and (pointer: coarse) {
-  * { cursor: auto !important; }
-  .custom-cursor { display: none !important; }
 }
 
 /* Scrollbar */

@@ -51,7 +51,7 @@ export default function About() {
                 alt="Luxury interior designed by MEO Development"
                 style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'brightness(0.72) saturate(0.9)' }}
               />
-              <div style={{ position: 'absolute', inset: 0, background: `linear-gradient(180deg, transparent 20%, ${DARK_CARD}E0 100%)` }} />
+              <div style={{ position: 'absolute', inset: 0, background: `linear-gradient(180deg, transparent 20%, ${DARK_CARD}E0 100%)`, pointerEvents: 'none' }} />
             </div>
             <div style={{ padding: 40 }}>
             <div style={{ color: GOLD, fontSize: 11, letterSpacing: 3, textTransform: 'uppercase', marginBottom: 28, fontWeight: 600 }}>

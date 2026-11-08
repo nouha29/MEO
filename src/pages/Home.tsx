@@ -66,6 +66,7 @@ export default function Home() {
         />
         <div style={{
           position: 'absolute', inset: 0,
+          pointerEvents: 'none',
           background: isMobile
             ? 'linear-gradient(180deg, rgba(250,249,245,0.5), rgba(250,249,245,0.68))'
             : 'linear-gradient(90deg, rgba(250,249,245,0.62) 0%, rgba(250,249,245,0.38) 48%, rgba(250,249,245,0.04) 100%)',
@@ -162,7 +163,7 @@ export default function Home() {
             >
               <div style={{ height: 160, position: 'relative', overflow: 'hidden' }}>
                 <img src={svc.image} alt={svc.title} style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'brightness(0.62) saturate(0.9)' }} />
-                <div style={{ position: 'absolute', inset: 0, background: `linear-gradient(180deg, transparent 20%, ${DARK_CARD} 100%)` }} />
+                <div style={{ position: 'absolute', inset: 0, background: `linear-gradient(180deg, transparent 20%, ${DARK_CARD} 100%)`, pointerEvents: 'none' }} />
                 <div style={{ position: 'absolute', left: 20, bottom: 14, color: GOLD_MUTED, fontSize: 42, fontWeight: 700, lineHeight: 1, fontFamily: 'Georgia, serif' }}>{svc.number}</div>
               </div>
               <div style={{ padding: isMobile ? '20px 20px 28px' : '28px 32px 36px' }}>
@@ -206,7 +207,7 @@ export default function Home() {
             <div key={i} style={{ background: DARK_CARD, border: `1px solid ${DARK_BORDER}`, overflow: 'hidden' }}>
               <div style={{ height: isMobile ? 160 : 220, background: CHARCOAL, position: 'relative' }}>
                 <img src={p.image} alt={p.type} style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'brightness(0.72) saturate(0.9)' }} />
-                <div style={{ position: 'absolute', inset: 0, background: `linear-gradient(180deg, transparent 45%, ${DARK_CARD}B8 100%)` }} />
+                <div style={{ position: 'absolute', inset: 0, background: `linear-gradient(180deg, transparent 45%, ${DARK_CARD}B8 100%)`, pointerEvents: 'none' }} />
                 <div style={{ position: 'absolute', top: 10, right: 10, background: GOLD, color: BLACK, fontSize: 9, fontWeight: 700, padding: '3px 7px', letterSpacing: 1.5 }}>{p.year}</div>
               </div>
               <div style={{ padding: '12px 14px' }}>

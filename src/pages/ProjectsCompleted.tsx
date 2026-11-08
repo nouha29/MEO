@@ -1,6 +1,7 @@
-import { GOLD, DARK_BORDER, OFF_WHITE, GREY, CREAM } from '../theme';
+import { GOLD, DARK_BORDER, OFF_WHITE, GREY, DARK_CARD, CREAM } from '../theme';
 import PageHeader from '../components/PageHeader';
 import ProjectCarousel from '../components/ProjectCarousel';
+import ProjectVideoCarousel from '../components/ProjectVideoCarousel';
 import { useLang } from '../context/LanguageContext';
 import { useResponsive } from '../hooks/useResponsive';
 
@@ -95,6 +96,36 @@ const completedProjects = [
   },
 ];
 
+const surfsideVideos = [
+  'WhatsApp Video 2026-11-03 at 17.56.46 (1).mp4',
+  'WhatsApp Video 2026-11-03 at 17.56.46.mp4',
+  'WhatsApp Video 2026-11-03 at 17.56.47.mp4',
+  'WhatsApp Video 2026-11-03 at 17.56.48 (1).mp4',
+  'WhatsApp Video 2026-11-03 at 17.56.48.mp4',
+  'WhatsApp Video 2026-11-03 at 17.56.58.mp4',
+  'WhatsApp Video 2026-11-03 at 17.57.05.mp4',
+  'WhatsApp Video 2026-11-03 at 17.57.18.mp4',
+  'WhatsApp Video 2026-11-03 at 17.57.25.mp4',
+  'WhatsApp Video 2026-11-03 at 17.57.35.mp4',
+  'WhatsApp Video 2026-11-03 at 17.57.36 (1).mp4',
+  'WhatsApp Video 2026-11-03 at 17.57.36.mp4',
+  'WhatsApp Video 2026-11-03 at 17.57.37.mp4',
+  'WhatsApp Video 2026-11-03 at 17.57.41.mp4',
+  'WhatsApp Video 2026-11-03 at 17.57.42.mp4',
+  'WhatsApp Video 2026-11-03 at 17.57.43.mp4',
+  'WhatsApp Video 2026-11-03 at 17.57.44.mp4',
+  'WhatsApp Video 2026-11-03 at 17.57.46.mp4',
+  'WhatsApp Video 2026-11-03 at 17.57.47.mp4',
+  'WhatsApp Video 2026-11-03 at 17.57.48.mp4',
+  'WhatsApp Video 2026-11-03 at 17.57.49.mp4',
+  'WhatsApp Video 2026-11-03 at 17.57.50.mp4',
+  'WhatsApp Video 2026-11-03 at 17.57.51.mp4',
+  'WhatsApp Video 2026-11-03 at 17.57.53.mp4',
+  'WhatsApp Video 2026-11-03 at 17.57.54.mp4',
+  'WhatsApp Video 2026-11-03 at 17.57.55 (1).mp4',
+  'WhatsApp Video 2026-11-03 at 17.57.55.mp4',
+].map(fileName => `/videos/meo%20videos/${encodeURIComponent(fileName)}`);
+
 export default function ProjectsCompleted() {
   const { t } = useLang();
   const { isMobile } = useResponsive();
@@ -171,6 +202,56 @@ export default function ProjectsCompleted() {
           </div>
         </div>
       ))}
+
+      <section style={{ background: DARK_CARD, borderTop: `1px solid ${DARK_BORDER}`, padding: isMobile ? '40px 16px' : '72px 32px' }}>
+        <div style={{ maxWidth: 1280, margin: '0 auto' }}>
+          <div style={{ marginBottom: isMobile ? 24 : 36 }}>
+            <div style={{ color: GOLD, fontSize: 10, letterSpacing: 4, textTransform: 'uppercase', fontWeight: 600, marginBottom: 8 }}>
+              {t('Project Films', 'Proje Videoları')}
+            </div>
+            <h2 style={{ color: OFF_WHITE, fontSize: isMobile ? 26 : 38, fontWeight: 700, margin: '0 0 12px', lineHeight: 1.1 }}>
+              Art Surfside Penthouse Project
+            </h2>
+            <div style={{ width: 60, height: 2, background: GOLD, marginBottom: 14 }} />
+            <p style={{ color: GREY, fontSize: 13, lineHeight: 1.7, maxWidth: 620 }}>
+              {t('Explore video highlights from the Art Surfside penthouse project.', 'Art Surfside penthouse projesinden video görüntülerini keşfedin.')}
+            </p>
+          </div>
+
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: isMobile ? '1fr' : '3fr 2fr',
+            gap: isMobile ? 20 : 40,
+            alignItems: 'start',
+            paddingTop: isMobile ? 8 : 16,
+          }}>
+            <ProjectVideoCarousel videos={surfsideVideos} isMobile={isMobile} />
+            <div style={{ paddingTop: isMobile ? 0 : 8 }}>
+              <h3 style={{ color: OFF_WHITE, fontSize: isMobile ? 22 : 30, fontWeight: 700, lineHeight: 1.2, margin: '0 0 8px' }}>
+                Art Surfside Penthouse Project
+              </h3>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 20 }}>
+                <div style={{ width: 3, height: 14, background: GOLD }} />
+                <span style={{ color: GREY, fontSize: 11, letterSpacing: 0.5 }}>Surfside, Florida</span>
+              </div>
+              <div style={{ width: 32, height: 1, background: `${GOLD}66`, marginBottom: 18 }} />
+              <p style={{ color: GREY, fontSize: isMobile ? 13 : 14, lineHeight: 1.9, marginBottom: 24 }}>
+                {t('Explore video highlights from the Art Surfside penthouse project.', 'Art Surfside penthouse projesinden video görüntülerini keşfedin.')}
+              </p>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: 24 }}>
+                <span style={{ border: `1px solid ${GOLD}44`, color: GOLD, fontSize: 9, letterSpacing: 2, padding: '5px 14px', textTransform: 'uppercase' }}>Penthouse</span>
+                <span style={{ border: `1px solid ${DARK_BORDER}`, color: GREY, fontSize: 9, letterSpacing: 2, padding: '5px 14px', textTransform: 'uppercase' }}>MEO Development LLC</span>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 8, opacity: 0.5 }}>
+                <div style={{ width: 16, height: 1, background: GREY }} />
+                <span style={{ color: GREY, fontSize: 9, letterSpacing: 2, textTransform: 'uppercase' }}>
+                  {surfsideVideos.length} {t('videos', 'videolar')}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

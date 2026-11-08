@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { LanguageProvider } from './context/LanguageContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import CustomCursor from './components/CustomCursor';
+import ImageLightbox from './components/ImageLightbox';
 import MarqueeBand from './components/MarqueeBand';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -18,7 +18,7 @@ export default function App() {
   return (
     <LanguageProvider>
     <BrowserRouter>
-      <CustomCursor />
+      <ImageLightbox />
       <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
         <Navbar />
         <MarqueeBand />

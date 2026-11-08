@@ -93,7 +93,7 @@ export default function Design() {
               <div key={i} style={{ background: DARK_CARD }}>
                 <div style={{ height: isMobile ? 160 : 190, position: 'relative', overflow: 'hidden' }}>
                   <img src={seg.image} alt={seg.title} style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'brightness(0.7) saturate(0.9)' }} />
-                  <div style={{ position: 'absolute', inset: 0, background: `linear-gradient(180deg, transparent 30%, ${DARK_CARD}E6 100%)` }} />
+                  <div style={{ position: 'absolute', inset: 0, background: `linear-gradient(180deg, transparent 30%, ${DARK_CARD}E6 100%)`, pointerEvents: 'none' }} />
                 </div>
                 <div style={{ padding: isMobile ? '20px 18px 24px' : '28px 32px 36px' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 12 }}>
